@@ -10,7 +10,28 @@ function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
 }
 
-/** Curva em forma de "asa/folha": vai de p0 a p1 curvando de um lado, e volta curvando do outro — um único traço contínuo. */
+/** Arco aberto de p0 a p1, com uma "barriga" perpendicular à linha reta entre os pontos. */
+function archPath(p0: [number, number], p1: [number, number], bulge: number, n = 32) {
+  const [x0, y0] = p0;
+  const [x1, y1] = p1;
+  const dx = x1 - x0;
+  const dy = y1 - y0;
+  const len = Math.hypot(dx, dy) || 1;
+  const nx = -dy / len;
+  const ny = dx / len;
+
+  const points: string[] = [];
+  for (let i = 0; i <= n; i++) {
+    const t = i / n;
+    const off = Math.sin(Math.PI * t) * bulge;
+    const x = lerp(x0, x1, t) + nx * off;
+    const y = lerp(y0, y1, t) + ny * off;
+    points.push(`${i === 0 ? "M" : "L"}${x.toFixed(2)},${y.toFixed(2)}`);
+  }
+  return points.join(" ");
+}
+
+/** Curva em forma de "asa/folha" fechada: vai de p0 a p1 curvando de um lado, e volta curvando do outro. */
 function lensPath(p0: [number, number], p1: [number, number], amp1: number, amp2: number, n = 26) {
   const [x0, y0] = p0;
   const [x1, y1] = p1;
@@ -34,12 +55,12 @@ function lensPath(p0: [number, number], p1: [number, number], amp1: number, amp2
   return points.map((p, i) => `${i === 0 ? "M" : "L"}${p[0].toFixed(2)},${p[1].toFixed(2)}`).join(" ");
 }
 
-/** Espiral (cabeça), terminando num pequeno segmento reto até o pescoço/ombro. */
+/** Espiral (cabeça), terminando num pequeno segmento reto até o pescoço. */
 function spiralPath(cx: number, cy: number, turns: number, r0: number, r1: number, tailTo: [number, number], n = 64) {
   const points: string[] = [];
   for (let i = 0; i <= n; i++) {
     const t = i / n;
-    const angle = -Math.PI * 0.65 + t * turns * Math.PI * 2;
+    const angle = Math.PI * 0.15 + t * turns * Math.PI * 2;
     const r = lerp(r0, r1, t);
     const x = cx + r * Math.cos(angle);
     const y = cy + r * Math.sin(angle);
@@ -49,15 +70,16 @@ function spiralPath(cx: number, cy: number, turns: number, r0: number, r1: numbe
   return points.join(" ");
 }
 
-const HEAD_D = spiralPath(102, 40, 1.55, 16, 3, [100, 86]);
+// viewBox 0 0 260 220 — a logo original é mais larga do que alta.
+const HEAD_D = spiralPath(140, 34, 1.45, 17, 3, [150, 58]);
 const ARMS_D = [
-  lensPath([100, 86], [16, 110], 34, -18),
-  lensPath([100, 86], [184, 110], -34, 18),
-  "M100,86 L100,150",
+  archPath([150, 58], [55, 108], 44),
+  archPath([204, 106], [40, 82], -42),
 ].join(" ");
 const LEGS_D = [
-  lensPath([92, 150], [154, 252], 24, -13),
-  lensPath([108, 150], [46, 252], -24, 13),
+  "M140,96 L140,142",
+  lensPath([124, 142], [208, 216], 26, -14),
+  lensPath([156, 142], [68, 216], -26, 14),
 ].join(" ");
 
 function DrawPath({
@@ -107,12 +129,12 @@ export default function LogoMark({
   const gradId = useId();
 
   return (
-    <svg viewBox="0 0 200 260" fill="none" className={className} aria-hidden="true">
+    <svg viewBox="0 0 260 220" fill="none" className={className} aria-hidden="true">
       <defs>
-        <linearGradient id={gradId} gradientUnits="userSpaceOnUse" x1="100" y1="15" x2="100" y2="255">
+        <linearGradient id={gradId} gradientUnits="userSpaceOnUse" x1="140" y1="10" x2="140" y2="215">
           <stop offset="0%" stopColor="#9c77aa" />
-          <stop offset="42%" stopColor="#5e61a5" />
-          <stop offset="70%" stopColor="#336d98" />
+          <stop offset="35%" stopColor="#5e61a5" />
+          <stop offset="60%" stopColor="#336d98" />
           <stop offset="100%" stopColor="#35a43f" />
         </linearGradient>
       </defs>
@@ -124,7 +146,7 @@ export default function LogoMark({
         strokeLinejoin="round"
         animate={animate}
         delay={0}
-        duration={650}
+        duration={600}
       />
       <DrawPath
         d={ARMS_D}
@@ -133,8 +155,8 @@ export default function LogoMark({
         strokeLinecap="round"
         strokeLinejoin="round"
         animate={animate}
-        delay={500}
-        duration={950}
+        delay={450}
+        duration={1000}
       />
       <DrawPath
         d={LEGS_D}
@@ -143,7 +165,7 @@ export default function LogoMark({
         strokeLinecap="round"
         strokeLinejoin="round"
         animate={animate}
-        delay={1250}
+        delay={1300}
         duration={950}
       />
     </svg>
