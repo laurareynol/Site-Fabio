@@ -16,7 +16,7 @@ export default function Portfolio() {
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-sage-700">
           Registros dos atendimentos e técnicas aplicadas no consultório.
           <span className="block text-sm text-sage-500">
-            (galeria ilustrativa — em breve com fotos reais dos atendimentos)
+            (galeria ilustrativa: em breve com fotos reais dos atendimentos)
           </span>
         </p>
       </div>
