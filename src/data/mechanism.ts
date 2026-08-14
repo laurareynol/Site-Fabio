@@ -12,7 +12,7 @@ export const SESSION_STEPS = [
   {
     step: "03",
     title: "Protocolo individual",
-    text: "Definição das técnicas e pontos ideais para o seu caso — acupuntura, moxa, ventosas ou fitoterapia.",
+    text: "Definição das técnicas e pontos ideais para o seu caso: acupuntura, moxa, ventosas ou fitoterapia.",
   },
   {
     step: "04",
