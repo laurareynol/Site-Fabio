@@ -20,7 +20,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#inicio" className="flex items-baseline gap-2">
+        <a href="#inicio" className="flex flex-col leading-tight">
           <span
             className={`font-serif text-xl font-medium tracking-tight ${
               scrolled || open ? "text-sage-900" : "text-white"
@@ -29,11 +29,11 @@ export default function Header() {
             Fabio Camolesi
           </span>
           <span
-            className={`hidden text-[11px] uppercase tracking-[0.18em] sm:inline ${
+            className={`text-[11px] uppercase tracking-[0.18em] ${
               scrolled || open ? "text-sage-500" : "text-white/70"
             }`}
           >
-            Acupuntura &amp; MTC
+            Medicina Tradicional Chinesa
           </span>
         </a>
 
