@@ -22,8 +22,8 @@ export default function Testimonials() {
           <span className="italic text-sage-600">transformação e cuidado</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-sage-700">
-          Do consultório saem relatos de pessoas de todas as idades — crianças, grávidas,
-          adolescentes, adultos e idosos — que encontraram alívio e equilíbrio através do
+          Do consultório saem relatos de pessoas de todas as idades: crianças, grávidas,
+          adolescentes, adultos e idosos, que encontraram alívio e equilíbrio através do
           tratamento.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
@@ -37,7 +37,7 @@ export default function Testimonials() {
           ))}
         </div>
         <p className="mt-3 text-xs text-sage-500">
-          (depoimentos ilustrativos — em breve com relatos e fotos reais dos pacientes)
+          (depoimentos ilustrativos: em breve com relatos e fotos reais dos pacientes)
         </p>
       </div>
 
