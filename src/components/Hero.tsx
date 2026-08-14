@@ -22,9 +22,9 @@ export default function Hero() {
         <circle cx="85%" cy="20%" r="30%" fill="#71904e" opacity="0.25" />
         <circle cx="10%" cy="85%" r="25%" fill="#1a2b21" opacity="0.45" />
       </svg>
-      <LogoMark className="pointer-events-none absolute -right-6 top-10 h-[22rem] w-auto opacity-65 sm:top-6 sm:h-[30rem] md:h-[34rem]" />
-
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-40 sm:px-8 sm:pb-20 sm:pt-48">
+        <LogoMark className="pointer-events-none absolute right-0 top-8 -z-10 h-[18rem] w-auto opacity-65 sm:top-4 sm:h-[24rem] lg:h-[28rem]" />
+
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.16em] text-sage-100 backdrop-blur-sm">
           <Leaf className="h-3.5 w-3.5" strokeWidth={1.8} />
           Acupuntura &amp; Medicina Tradicional Chinesa
