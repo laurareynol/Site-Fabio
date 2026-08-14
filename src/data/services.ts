@@ -20,7 +20,7 @@ export const SERVICES: Service[] = [
     title: "Auriculoterapia",
     short: "Estímulo de pontos reflexos na orelha.",
     description:
-      "Técnica que utiliza pontos específicos da orelha — um verdadeiro mapa do corpo — para tratar desequilíbrios físicos e emocionais de forma suave e não invasiva.",
+      "Técnica que utiliza pontos específicos da orelha, um verdadeiro mapa do corpo, para tratar desequilíbrios físicos e emocionais de forma suave e não invasiva.",
     benefits: ["Compulsão alimentar", "Estresse e ansiedade", "Apoio a dependências"],
   },
   {
@@ -28,7 +28,7 @@ export const SERVICES: Service[] = [
     title: "Moxabustão",
     short: "Calor terapêutico da erva moxa (artemísia).",
     description:
-      "Aplicação de calor por meio da combustão da erva moxa sobre pontos de acupuntura, aquecendo e tonificando a energia vital — ideal para quadros de frio, fadiga e baixa imunidade.",
+      "Aplicação de calor por meio da combustão da erva moxa sobre pontos de acupuntura, aquecendo e tonificando a energia vital. Ideal para quadros de frio, fadiga e baixa imunidade.",
     benefits: ["Fadiga e baixa energia", "Cólicas e desconfortos", "Fortalecimento imunológico"],
   },
   {
