@@ -40,7 +40,7 @@ export default function Mechanism() {
           <p className="mt-3 text-sm leading-relaxed text-sage-200">
             Estudos mostram que a estimulação dos pontos de acupuntura ativa o sistema nervoso
             central, liberando endorfinas e neurotransmissores analgésicos, melhorando a
-            microcirculação sanguínea local e modulando respostas inflamatórias — o que explica
+            microcirculação sanguínea local e modulando respostas inflamatórias, o que explica
             o alívio de dores, a redução do estresse e a melhora do sono.
           </p>
         </div>
