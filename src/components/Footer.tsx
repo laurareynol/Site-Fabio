@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-sage-800 pt-8 text-xs text-sage-400 sm:flex-row">
-          <p>© {new Date().getFullYear()} Fabio Camolesi — Terapias Holísticas. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Fabio Camolesi, Terapias Holísticas. Todos os direitos reservados.</p>
           <p>Conteúdo ilustrativo em desenvolvimento.</p>
         </div>
       </div>
