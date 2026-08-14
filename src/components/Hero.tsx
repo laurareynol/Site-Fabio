@@ -1,4 +1,5 @@
 import { ArrowRight, CalendarCheck, Leaf } from "lucide-react";
+import LogoMark from "./LogoMark";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "../data/site";
 
 const STATS = [
@@ -21,16 +22,7 @@ export default function Hero() {
         <circle cx="85%" cy="20%" r="30%" fill="#71904e" opacity="0.25" />
         <circle cx="10%" cy="85%" r="25%" fill="#1a2b21" opacity="0.45" />
       </svg>
-      <svg
-        className="absolute -right-16 top-16 h-[26rem] w-[26rem] opacity-20 sm:h-[34rem] sm:w-[34rem]"
-        viewBox="0 0 100 100"
-        fill="none"
-        stroke="#e6ebd9"
-        strokeWidth="0.6"
-      >
-        <path d="M50 95C50 95 15 80 15 45C15 22 30 8 50 8C48 28 50 55 80 62C70 78 50 95 50 95Z" />
-        <path d="M50 8C50 8 60 30 50 50C42 66 30 70 15 45" />
-      </svg>
+      <LogoMark className="pointer-events-none absolute -right-6 top-10 h-[22rem] w-auto opacity-65 sm:top-6 sm:h-[30rem] md:h-[34rem]" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-40 sm:px-8 sm:pb-20 sm:pt-48">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.16em] text-sage-100 backdrop-blur-sm">
