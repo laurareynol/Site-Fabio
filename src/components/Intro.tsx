@@ -14,7 +14,7 @@ const PILLARS = [
   {
     icon: Sparkles,
     title: "Corpo e mente",
-    text: "Tratamos a raiz do desequilíbrio — não apenas o sintoma — unindo tradição milenar e escuta atenta.",
+    text: "Tratamos a raiz do desequilíbrio, não apenas o sintoma, unindo tradição milenar e escuta atenta.",
   },
 ];
 
@@ -30,8 +30,8 @@ export default function Intro() {
           <span className="italic text-sage-600">bem-estar de verdade</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-sage-700">
-          A cura holística olha para a pessoa como um todo — corpo, mente e espírito — e não
-          apenas para sintomas isolados. Ao trabalhar a origem dos desequilíbrios, a acupuntura
+          A cura holística olha para a pessoa como um todo: corpo, mente e espírito, não apenas
+          para sintomas isolados. Ao trabalhar a origem dos desequilíbrios, a acupuntura
           e as terapias tradicionais chinesas oferecem um caminho suave e potente para aliviar
           dores, reduzir o estresse e devolver a você a sensação de estar inteiro novamente.
         </p>
