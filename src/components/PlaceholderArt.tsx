@@ -28,7 +28,7 @@ function initialsFrom(name: string) {
     .join("");
 }
 
-/** Círculo com iniciais — usado como placeholder de retrato até termos fotos reais. */
+/** Círculo com iniciais: usado como placeholder de retrato até termos fotos reais. */
 export function AvatarPlaceholder({
   name,
   size = 56,
