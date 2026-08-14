@@ -2,7 +2,7 @@ export const FAQ_ITEMS = [
   {
     question: "A acupuntura dói?",
     answer:
-      "As agulhas utilizadas são extremamente finas — muito diferentes das agulhas de injeção. A maioria dos pacientes sente apenas uma leve sensação de peso ou formigamento no ponto, seguida de relaxamento profundo.",
+      "As agulhas utilizadas são extremamente finas, muito diferentes das agulhas de injeção. A maioria dos pacientes sente apenas uma leve sensação de peso ou formigamento no ponto, seguida de relaxamento profundo.",
   },
   {
     question: "Quantas sessões são necessárias?",
