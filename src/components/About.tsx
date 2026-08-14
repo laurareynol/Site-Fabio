@@ -45,7 +45,7 @@ export default function About() {
             Sobre o terapeuta
           </p>
           <h2 className="mt-4 font-serif text-3xl font-medium leading-tight text-sage-900 sm:text-4xl">
-            {CONTACT.name} — seu guia para a{" "}
+            {CONTACT.name}, seu guia para a{" "}
             <span className="italic text-sage-600">cura natural</span>
           </h2>
 
@@ -58,7 +58,7 @@ export default function About() {
             <p>
               Minha jornada começou com a busca por respostas que a medicina convencional nem
               sempre oferece para o sofrimento crônico. Encontrei na acupuntura e na sabedoria
-              chinesa milenar uma abordagem que trata a origem — não apenas o sintoma — e que
+              chinesa milenar uma abordagem que trata a origem, não apenas o sintoma, e que
               devolve às pessoas a sensação de estarem inteiras.
             </p>
             <p className="font-serif italic text-sage-800">
