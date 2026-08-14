@@ -25,7 +25,7 @@ export default function Methods() {
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-sage-700">
           Cada sessão combina uma ou mais técnicas da Medicina Tradicional Chinesa, escolhidas
-          de acordo com a sua avaliação individual — sempre com um plano de cuidado pensado
+          de acordo com a sua avaliação individual, sempre com um plano de cuidado pensado
           para você.
         </p>
       </div>
