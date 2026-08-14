@@ -1,12 +1,6 @@
-import { ArrowRight, CalendarCheck, Leaf } from "lucide-react";
+import { ArrowRight, CalendarCheck } from "lucide-react";
 import LogoMark from "./LogoMark";
 import { DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from "../data/site";
-
-const STATS = [
-  { value: "15+", label: "anos de prática clínica" },
-  { value: "3.000+", label: "sessões realizadas" },
-  { value: "98%", label: "de pacientes satisfeitos" },
-];
 
 export default function Hero() {
   return (
@@ -26,7 +20,6 @@ export default function Hero() {
         <LogoMark className="pointer-events-none absolute right-0 top-48 -z-10 h-[18rem] w-auto opacity-65 sm:top-52 sm:h-[24rem] lg:top-36 lg:h-[28rem]" />
 
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.16em] text-sage-100 backdrop-blur-sm">
-          <Leaf className="h-3.5 w-3.5" strokeWidth={1.8} />
           Acupuntura &amp; Medicina Tradicional Chinesa
         </div>
 
@@ -37,8 +30,8 @@ export default function Hero() {
 
         <p className="mt-6 max-w-xl text-base leading-relaxed text-sage-100/90 sm:text-lg">
           Sou Fabio Camolesi, terapeuta holístico e acupunturista. Uso os princípios milenares
-          da Medicina Tradicional Chinesa para tratar dores, ansiedade, estresse e desequilíbrios
-          — cuidando de você de forma individual e integrada.
+          da Medicina Tradicional Chinesa para tratar dores, ansiedade, estresse e desequilíbrios,
+          cuidando de você de forma individual e integrada.
         </p>
 
         <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -60,13 +53,9 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/15 pt-8">
-          {STATS.map((s) => (
-            <div key={s.label}>
-              <p className="font-serif text-2xl font-medium text-white sm:text-3xl">{s.value}</p>
-              <p className="mt-1 text-xs text-sage-200/90 sm:text-sm">{s.label}</p>
-            </div>
-          ))}
+        <div className="mt-16 max-w-2xl border-t border-white/15 pt-8">
+          <p className="font-serif text-2xl font-medium text-white sm:text-3xl">18+</p>
+          <p className="mt-1 text-xs text-sage-200/90 sm:text-sm">anos de prática clínica</p>
         </div>
       </div>
     </section>
